@@ -1,0 +1,45 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header Section */
+header {
+    background-color: #f8f9fa;
+    color: #000000;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.25rem;
+}
+
+/* About Section */
+#about {
+    background-color: #fff;
+    color: #000000;
+}
+
+/* Blog Posts Section */
+#posts .card {
+    margin-bottom: 1.5rem;
+}
+
+/* Contact Section */
+#contact-form .form-control {
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #fff;
+}
+
+footer p {
+    margin: 0;
+}
