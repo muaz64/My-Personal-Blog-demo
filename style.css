@@ -27,6 +27,7 @@ header p {
 /* Blog Posts Section */
 #posts .card {
     margin-bottom: 1.5rem;
+    background-color: #00ffea;
 }
 
 /* Contact Section */
