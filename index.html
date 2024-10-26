@@ -55,11 +55,29 @@
     <section id="posts" class="py-5 bg-light">
         <div class="container">
             <h2 class="text-center">Latest Blog Posts</h2>
-            <div id="post-list" class="row">
-                <!-- Blog posts will be inserted here dynamically -->
+            
+            <!-- Static Blog Posts -->
+            <div id="static-posts" class="row">
+                <!-- First two blog posts will be displayed here -->
+            </div>
+    
+            <!-- Carousel for additional blog posts -->
+            <div id="carousel-posts" class="carousel slide mt-4" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Carousel items will be generated here -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-posts" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel-posts" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </section>
+    
 
     <!-- Contact Section -->
     <section id="contact" class="py-5">
