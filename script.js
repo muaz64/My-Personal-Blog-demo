@@ -10,9 +10,9 @@ const blogPosts = [
 // Function to display the first two blog posts statically
 function displayStaticBlogPosts() {
     const staticPostsContainer = document.getElementById('static-posts');
-    blogPosts.slice( 4).forEach(post => {
+    blogPosts.slice(4).forEach(post => {
         const postCard = `
-        <div class="col-md-6 mb-4">
+        <div class="col-md-12 mb-4">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">${post.title}</h5>
@@ -34,7 +34,7 @@ function displayCarouselBlogPosts() {
         const isActive = index === 0 ? 'active' : ''; // Set first slide as active
         const carouselItem = `
         <div class="carousel-item ${isActive}">
-            <div class="card mx-auto" style="max-width: 18rem;">
+            <div class="card mx-auto" style="max-width: 50rem;">
                 <div class="card-body">
                     <h5 class="card-title">${post.title}</h5>
                     <p class="card-text">${post.description}</p>
