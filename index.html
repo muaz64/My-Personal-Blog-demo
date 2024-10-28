@@ -51,32 +51,51 @@
         </div>
     </section>
 
-    <!-- Blog Posts Section -->
-    <section id="posts" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center">Latest Blog Posts</h2>
-            
-            <!-- Static Blog Posts -->
-            <div id="static-posts" class="row">
-                <!-- First two blog posts will be displayed here -->
+   <!-- Blog Posts Section -->
+<section id="posts" class="py-5 bg-dark">
+    <div class="container">
+        <h2 class="text-center">Latest Blog Posts</h2>
+        
+        <!-- Static Blog Posts -->
+        <div id="static-posts" class="row">
+            <!-- First two blog posts will be displayed here -->
+        </div>
+
+        <!-- Carousel for additional blog posts -->
+        <div id="carousel-posts" class="carousel slide mt-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Carousel items will be generated here -->
             </div>
-    
-            <!-- Carousel for additional blog posts -->
-            <div id="carousel-posts" class="carousel slide mt-3" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <!-- Carousel items will be generated here -->
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-posts" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carousel-posts" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-posts" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-posts" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Modal Structure for Blog Post Popup -->
+<div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="postModalLabel">Blog Post Title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="postModalContent">Blog post content goes here.</p>
+                <p><small id="postModalDate" class="text-muted">Date</small></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
-    </section>
+    </div>
+</div>
     
 
     <!-- Contact Section -->

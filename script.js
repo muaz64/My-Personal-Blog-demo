@@ -10,10 +10,10 @@ const blogPosts = [
 // Function to display the first two blog posts statically
 function displayStaticBlogPosts() {
     const staticPostsContainer = document.getElementById('static-posts');
-    blogPosts.slice(4).forEach(post => {
+    blogPosts.slice(0, 2).forEach((post, index) => {
         const postCard = `
-        <div class="col-md-12 mb-4">
-            <div class="card">
+        <div class="col-md-6 mb-4">
+            <div class="card" onclick="openModal(${index})" style="cursor: pointer;">
                 <div class="card-body">
                     <h5 class="card-title">${post.title}</h5>
                     <p class="card-text">${post.description}</p>
@@ -28,13 +28,13 @@ function displayStaticBlogPosts() {
 // Function to display remaining blog posts in a carousel
 function displayCarouselBlogPosts() {
     const carouselInner = document.querySelector('#carousel-posts .carousel-inner');
-    const carouselPosts = blogPosts.slice(0); // Take remaining posts after first two
+    const carouselPosts = blogPosts.slice(2); // Take remaining posts after first two
 
     carouselPosts.forEach((post, index) => {
         const isActive = index === 0 ? 'active' : ''; // Set first slide as active
         const carouselItem = `
         <div class="carousel-item ${isActive}">
-            <div class="card mx-auto" style="max-width: 50rem;">
+            <div class="card mx-auto" style="max-width: 18rem;" onclick="openModal(${index + 2})" style="cursor: pointer;">
                 <div class="card-body">
                     <h5 class="card-title">${post.title}</h5>
                     <p class="card-text">${post.description}</p>
@@ -46,12 +46,23 @@ function displayCarouselBlogPosts() {
     });
 }
 
+// Function to open the modal with blog post details
+function openModal(index) {
+    const post = blogPosts[index];
+    document.getElementById('postModalLabel').innerText = post.title;
+    document.getElementById('postModalContent').innerText = post.content;
+    document.getElementById('postModalDate').innerText = post.date;
+
+    // Show the modal
+    const postModal = new bootstrap.Modal(document.getElementById('postModal'));
+    postModal.show();
+}
+
 // Call functions to display blog posts on page load
 document.addEventListener('DOMContentLoaded', () => {
     displayStaticBlogPosts();
     displayCarouselBlogPosts();
 });
-
 
 // Form Submission Logic for Contact (Dummy for now)
 document.getElementById('contact-form').addEventListener('submit', function(e) {
