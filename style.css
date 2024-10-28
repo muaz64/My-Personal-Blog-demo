@@ -25,6 +25,9 @@ header p {
 }
 
 /* Blog Posts Section */
+#posts{
+    background-color: #c5c5c5bd;
+}
 #posts .card {
     margin-bottom: 1.5rem;
     background-color: #c1d3d2;
@@ -32,7 +35,9 @@ header p {
 
 
 /* Contact Section */
+
 #contact-form .form-control {
+   
     margin-bottom: 15px;
 }
 
